@@ -1,4 +1,4 @@
-# 👻🕯️ MemoriaViva — Cute Ghost in the Machine: Open-Weights Gemma 4 & Google ADK Family Oral-History & Heirloom Recipe Weaver
+# 👻🕯️ MemoriaViva: Cute Ghost in the Machine: Open-Weights Gemma 4 & Google ADK Family Oral-History & Heirloom Recipe Weaver
 
 [![Hacktoberfest 2026](https://img.shields.io/badge/Hacktoberfest%202026-Ghost%20in%20the%20Machine-f59e0b?style=for-the-badge&logo=github)](https://dev.to/challenges/hacktoberfest-week4-2026-10-26)
 [![Google Gemma 4](https://img.shields.io/badge/Open--Weights-Gemma%204%20(27B)-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://ai.google.dev/gemma)
@@ -8,8 +8,8 @@
 
 ![MemoriaViva Cover](https://raw.githubusercontent.com/RobinaMirbahar/memoriaviva-gemma-ofrenda/main/articles/memoriaviva/cover_google_ghost_style.jpg)
 
-> **Author & Architect:** [Robina Mirbahar](https://github.com/RobinaMirbahar) — Google Developer Expert (GDE) in Cloud & AI · Google Cloud Champion Innovator · Author of [*AI Engineering*](https://amazon.com/dp/B0GWCZWCF4)  
-> **Challenge Track:** Hacktoberfest Open-Source AI Challenge Week 4 — *Ghost in the Machine* (`#hf26challenge`, `#gemma`, `#googleai`)
+> **Author & Architect:** [Robina Mirbahar](https://github.com/RobinaMirbahar): Google Developer Expert (GDE) in Cloud & AI · Google Cloud Champion Innovator · Author of [*AI Engineering*](https://amazon.com/dp/B0GWCZWCF4)  
+> **Challenge Track:** Hacktoberfest Open-Source AI Challenge Week 4: *Ghost in the Machine* (`#hf26challenge`, `#gemma`, `#googleai`)
 
 ---
 
@@ -17,9 +17,9 @@
 
 Every family has a **"Ghost in the Machine"** waiting to be remembered: a crackly voice note from a grandfather, a flour-stained index card in a grandmother's handwriting (*"two cupped handfuls of wheat flour, warm milk until the dough sighs softly"*), or fading family stories.
 
-**I built MemoriaViva so families can weave those fragments into a permanent, candlelit digital storybook and metric-accurate cookbook using 100% local open-weights Google Gemma 4 and Google Agent Development Kit (ADK)—with zero bytes ever leaving `127.0.0.1`.**
+**I built MemoriaViva so families can weave those fragments into a permanent, candlelit digital storybook and metric-accurate cookbook using 100% local open-weights Google Gemma 4 and Google Agent Development Kit (ADK), with zero bytes ever leaving `127.0.0.1`.**
 
-![MemoriaViva Cute Ghost in the Machine](https://raw.githubusercontent.com/RobinaMirbahar/memoriaviva-gemma-ofrenda/main/articles/memoriaviva/cover_cute_ghost.jpg)
+![MemoriaViva Cute Ghost in the Machine](https://raw.githubusercontent.com/RobinaMirbahar/memoriaviva-gemma-ofrenda/main/articles/memoriaviva/arch_google_ghost_style.jpg)
 
 ---
 
@@ -72,13 +72,13 @@ python scripts/run_memoriaviva_demo.py
 uvicorn memoriaviva.dashboard:app --host 127.0.0.1 --port 8090
 ```
 
-![MemoriaViva Candlelit UI](https://raw.githubusercontent.com/RobinaMirbahar/memoriaviva-gemma-ofrenda/main/articles/memoriaviva/memoriaviva_ui.jpg)
+![MemoriaViva Candlelit UI](https://raw.githubusercontent.com/RobinaMirbahar/memoriaviva-gemma-ofrenda/main/articles/memoriaviva/memoriaviva_ui_white.jpg)
 
 ---
 
 ## 👩‍💻 About the Author
 
-**Robina Mirbahar** — AI Researcher, Cloud Solutions Architect & Author of [*AI Engineering*](https://amazon.com/dp/B0GWCZWCF4)
+**Robina Mirbahar**: AI Researcher, Cloud Solutions Architect & Author of [*AI Engineering*](https://amazon.com/dp/B0GWCZWCF4)
 
 [![GitHub](https://img.shields.io/badge/GitHub-RobinaMirbahar-181717?style=flat-square&logo=github)](https://github.com/RobinaMirbahar)
 [![Portfolio](https://img.shields.io/badge/Portfolio-robinamirbahar.github.io-38bdf8?style=flat-square&logo=googlechrome&logoColor=white)](https://robinamirbahar.github.io/)
