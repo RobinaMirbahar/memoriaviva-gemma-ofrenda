@@ -9,5 +9,5 @@
   <text x="16" y="72" font-family="'Segoe UI', Ubuntu, sans-serif" font-size="24" font-weight="800" fill="#0f172a">18 Spans</text>
   <text x="16" y="94" font-family="'Segoe UI', Ubuntu, sans-serif" font-size="11.5" font-weight="600" fill="#334155">Sentry gen_ai.agent Tracing</text>
   <rect x="16" y="104" width="208" height="20" rx="6" fill="#f1f5f9" stroke="#cbd5e1" stroke-width="1"/>
-  <text x="24" y="118" font-family="Consolas, monospace" font-size="10.5" font-weight="700" fill="#047857">✓ 142.9 ms Pipeline Latency</text>
+  <text x="24" y="118" font-family="Consolas, monospace" font-size="10.5" font-weight="700" fill="#047857">✓ OpenTelemetry AI Spans</text>
 </svg>

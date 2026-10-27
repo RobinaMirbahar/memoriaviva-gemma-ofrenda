@@ -6,7 +6,7 @@ from fastapi.responses import HTMLResponse
 from memoriaviva.schemas import RawFamilyMemory, WovenHeirloomStoryCard
 from memoriaviva.agents import MemoriaVivaSequentialPipeline
 
-app = FastAPI(title="MemoriaViva — Cute Ghost in the Machine (Gemma 4 + ADK)")
+app = FastAPI(title="MemoriaViva: Cute Ghost in the Machine (Gemma 4 + ADK)")
 pipeline = MemoriaVivaSequentialPipeline()
 
 SAMPLE_MEMORIES: List[RawFamilyMemory] = [
@@ -26,7 +26,7 @@ SAMPLE_MEMORIES: List[RawFamilyMemory] = [
         memory_id="MEM-02",
         elder_name="Abuelo Mateo Rivera",
         year_recorded=1968,
-        cultural_tradition="Día de los Muertos Candlelit Family Ofrenda (Oaxaca)",
+        cultural_tradition="Dia de los Muertos Candlelit Family Ofrenda (Oaxaca)",
         raw_voice_transcript="Four brimming clay bowls of bread flour, a warm splash of orange blossom water... roll the dough bones slowly while telling the children how your great-grandfather built the adobe oven.",
         poetic_measurements=[
             "four brimming clay bowls of bread flour",
@@ -75,7 +75,7 @@ def render_ofrenda_dashboard() -> str:
         <div class="card">
           <div class="badge">🕯️ {c.memory_id} • {c.year_recorded} • {c.cultural_tradition}</div>
           <h2>{c.title}</h2>
-          <p class="quote">“{c.verbatim_elder_quote}” — <strong>{c.elder_name}</strong></p>
+          <p class="quote">"{c.verbatim_elder_quote}" ({c.elder_name})</p>
           <p>{c.woven_narrative}</p>
           <ul>{ing_rows}</ul>
           <div class="meta">✓ 100% Local Gemma 4 • Hydration: {c.hydration_ratio_pct}% • Sentry Trace: {c.sentry_trace_id}</div>
@@ -85,18 +85,18 @@ def render_ofrenda_dashboard() -> str:
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>👻🕯️ MemoriaViva — Cute Ghost in the Machine (Gemma 4 + ADK)</title>
+  <title>👻🕯️ MemoriaViva: Cute Ghost in the Machine (Gemma 4 + ADK)</title>
   <style>
-    body {{ background:#110b1c; color:#fef3c7; font-family:system-ui,sans-serif; max-width:960px; margin:0 auto; padding:28px; }}
-    .card {{ background:#1b122c; border:1.5px solid #f59e0b; border-radius:14px; padding:20px; margin-bottom:18px; }}
-    .quote {{ color:#fde68a; font-style:italic; font-size:1.08rem; }}
-    .badge {{ color:#fbbf24; font-weight:700; font-size:0.85rem; }}
-    .meta {{ color:#34d399; font-family:monospace; font-size:0.85rem; margin-top:12px; }}
-    code {{ color:#38bdf8; }}
+    body {{ background:#ffffff; color:#0f172a; font-family:system-ui,sans-serif; max-width:960px; margin:0 auto; padding:28px; }}
+    .card {{ background:#fffbeb; border:1.5px solid #f59e0b; border-radius:14px; padding:20px; margin-bottom:18px; }}
+    .quote {{ color:#92400e; font-style:italic; font-size:1.08rem; }}
+    .badge {{ color:#b45309; font-weight:700; font-size:0.85rem; }}
+    .meta {{ color:#047857; font-family:monospace; font-size:0.85rem; margin-top:12px; }}
+    code {{ color:#0369a1; font-weight:600; }}
   </style>
 </head>
 <body>
-  <h1>👻🕯️ MemoriaViva — The Friendly Memory Ghost in Your Machine</h1>
+  <h1>👻🕯️ MemoriaViva: The Friendly Memory Ghost in Your Machine</h1>
   <p>Powered 100% locally by Open-Weights <strong>Gemma 4</strong>, <strong>Google ADK</strong>, and <strong>Sentry Agent Tracing</strong>.</p>
   {cards_html}
 </body>

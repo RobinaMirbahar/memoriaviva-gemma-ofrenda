@@ -30,7 +30,7 @@ class MemoriaVivaSequentialPipeline:
     Google ADK-style 3-Stage SequentialAgent Pipeline powered by local Open-Weights Gemma 4:
       1. OralHistoryWhisperAgent ("Lumi, the Friendly Ghost in the Machine")
       2. HeirloomRecipeAlchemistAgent (Poetic Ancestral Units -> Metric Grams/mL)
-      3. CandlelitOfrendaCuratorAgent (50-Year Self-Contained Heritage Card)
+      3. CandlelitOfrendaCuratorAgent (Zero-Dependency Static HTML5 & RFC 8259 JSON Card)
     """
 
     def __init__(self, model_name: str = "google/gemma-4-27b-it", endpoint: str = "http://127.0.0.1:11434") -> None:
@@ -45,32 +45,35 @@ class MemoriaVivaSequentialPipeline:
         # Stage 1: OralHistoryWhisperAgent
         s1_start = time.perf_counter()
         quote, title, narrative = self._run_oral_history_whisper_agent(raw)
+        s1_ms = round((time.perf_counter() - s1_start) * 1000.0, 2)
         self.tracer.record_span(
             op="gen_ai.agent",
             name="OralHistoryWhisperAgent",
             attributes={"gen_ai.request.model": self.model_name, "memory_id": raw.memory_id},
-            duration_ms=(time.perf_counter() - s1_start) * 1000.0 + 48.2,
+            duration_ms=s1_ms,
         )
 
         # Stage 2: HeirloomRecipeAlchemistAgent
         s2_start = time.perf_counter()
         standardized = self._run_recipe_alchemist_agent(raw)
         hydration_pct = compute_and_validate_hydration(standardized)
+        s2_ms = round((time.perf_counter() - s2_start) * 1000.0, 2)
         self.tracer.record_span(
             op="gen_ai.tool",
             name="HeirloomRecipeAlchemistAgent.standardize_units",
             attributes={"ingredients_converted": len(standardized), "hydration_pct": hydration_pct},
-            duration_ms=(time.perf_counter() - s2_start) * 1000.0 + 62.5,
+            duration_ms=s2_ms,
         )
 
         # Stage 3: CandlelitOfrendaCuratorAgent
         s3_start = time.perf_counter()
-        total_ms = round((time.perf_counter() - t0) * 1000.0 + 142.8, 1)
+        s3_ms = round((time.perf_counter() - s3_start) * 1000.0, 2)
+        total_ms = round((time.perf_counter() - t0) * 1000.0, 2)
         trace_id = self.tracer.record_span(
             op="gen_ai.agent",
             name="CandlelitOfrendaCuratorAgent",
             attributes={"gen_ai.request.model": self.model_name, "air_gapped": air_gap_ok},
-            duration_ms=(time.perf_counter() - s3_start) * 1000.0 + 32.1,
+            duration_ms=s3_ms,
         )
 
         return WovenHeirloomStoryCard(
@@ -98,7 +101,7 @@ class MemoriaVivaSequentialPipeline:
         elif raw.memory_id == "MEM-02":
             return (
                 "Roll the dough bones slowly while telling the children how your great-grandfather built the adobe oven.",
-                "Abuelo Mateo's Candlelit Orange-Blossom Pan de Muerto",
+                "Abuelo Mateo's Dia de los Muertos Cinnamon Pan de Muerto",
                 "Transcribed from a flour-stained notebook from Oaxaca (1968). Every October 31st at midnight, Abuelo Mateo lit marigold-scented candles so the kitchen warmth would welcome ancestors home."
             )
         else:
@@ -120,7 +123,7 @@ class MemoriaVivaSequentialPipeline:
                 ),
                 StandardizedIngredient(
                     original_phrase="one brass teacup of lukewarm milk tested with your fingertip",
-                    ingredient_name="Whole Warm Milk (38°C)",
+                    ingredient_name="Whole Warm Milk (38C)",
                     metric_grams_or_ml=180.0,
                     unit="ml",
                     culinary_note="Lukewarm to bloom the saffron without scalding"
@@ -147,7 +150,7 @@ class MemoriaVivaSequentialPipeline:
                     ingredient_name="Orange Blossom Infusion & Warm Milk",
                     metric_grams_or_ml=325.0,
                     unit="ml",
-                    culinary_note="Gives Pan de Muerto its unmistakable Día de los Muertos aroma"
+                    culinary_note="Gives Pan de Muerto its unmistakable Dia de los Muertos aroma"
                 ),
                 StandardizedIngredient(
                     original_phrase="two thumbs of freshly grated orange zest and Ceylon cinnamon",

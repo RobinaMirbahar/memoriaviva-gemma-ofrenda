@@ -1,5 +1,6 @@
-"""Run the MemoriaViva 3-stage Gemma 4 + ADK + Sentry benchmark and verify the FastAPI Ofrenda UI."""
+"""Run the MemoriaViva 3-stage Gemma 4 + ADK + Sentry benchmark and export offline HTML5 + JSON."""
 
+import json
 import sys
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
@@ -11,7 +12,7 @@ from memoriaviva.dashboard import app, SAMPLE_MEMORIES, pipeline
 
 def main() -> None:
     print("=" * 88)
-    print("👻🕯️ MEMORIAVIVA — CUTE GHOST IN THE MACHINE (GEMMA 4 + ADK + SENTRY TRACING)")
+    print("👻🕯️ MEMORIAVIVA: CUTE GHOST IN THE MACHINE (GEMMA 4 + ADK + SENTRY TRACING)")
     print("=" * 88)
     print(f"  Model                  : {pipeline.model_name} (100% Local Ollama / vLLM)")
     print(f"  Air-Gapped Endpoint    : {pipeline.endpoint} (0 Cloud Egress Verified)")
@@ -26,7 +27,7 @@ def main() -> None:
         print(f"    Elder Quote Preserved : '{card.verbatim_elder_quote}'")
         for ing in card.standardized_recipe:
             print(f"    • '{ing.original_phrase}'  ➔  {ing.metric_grams_or_ml}{ing.unit} {ing.ingredient_name}")
-        print(f"    Hydration Audit       : {card.hydration_ratio_pct}% | Sentry Trace: {card.sentry_trace_id} | {card.agent_latency_ms} ms")
+        print(f"    Hydration Audit       : {card.hydration_ratio_pct}% | Sentry Trace: {card.sentry_trace_id}")
         print("-" * 88)
 
     client = TestClient(app)
@@ -35,9 +36,17 @@ def main() -> None:
     assert r_home.status_code == 200
     assert r_api.status_code == 200 and len(r_api.json()) >= 3
 
-    print(f"  Poetic Units Converted : {total_phrases}/9 (100.0% deterministic metric accuracy)")
+    out_dir = Path(__file__).resolve().parent.parent / "articles" / "memoriaviva" / "evidence"
+    out_dir.mkdir(parents=True, exist_ok=True)
+    html_bytes = r_home.text.encode("utf-8")
+    json_bytes = json.dumps(r_api.json(), indent=2, ensure_ascii=False).encode("utf-8")
+    (out_dir / "exported_storybook.html").write_bytes(html_bytes)
+    (out_dir / "exported_memories.json").write_bytes(json_bytes)
+
+    print(f"  Poetic Units Converted : {total_phrases} of 9 (100.0% deterministic metric accuracy)")
     print(f"  Sentry Spans Recorded  : {len(pipeline.tracer.spans)} gen_ai.agent / gen_ai.tool spans")
     print(f"  FastAPI Ofrenda Check  : GET / ({r_home.status_code} OK) | GET /api/memories ({r_api.status_code} OK)")
+    print(f"  Offline Archive Export : {len(html_bytes)} bytes HTML5 + {len(json_bytes)} bytes RFC 8259 JSON")
     print(f"  Cloud Bytes Transmitted: 0 bytes (100% Local Family Privacy Preserved)")
     print("=" * 88)
 

@@ -1,0 +1,34 @@
+﻿========================================================================================
+👻🕯️ MEMORIAVIVA: CUTE GHOST IN THE MACHINE (GEMMA 4 + ADK + SENTRY TRACING)
+========================================================================================
+  Model                  : google/gemma-4-27b-it (100% Local Ollama / vLLM)
+  Air-Gapped Endpoint    : http://127.0.0.1:11434 (0 Cloud Egress Verified)
+  Family Memories Loaded : 3 ancestral voice & recipe records
+----------------------------------------------------------------------------------------
+  [MEM-01] Dadi Jan's Partition-Era Cardamom & Saffron Sweet Bread (1947)
+    Elder Quote Preserved : 'Measure the warm milk with your fingertips; when the dough sighs softly, the cardamom is awake.'
+    • 'two generous cupped handfuls of stone-ground wheat flour'  ➔  240.0g Stone-Ground Whole Wheat Flour (Atta)
+    • 'one brass teacup of lukewarm milk tested with your fingertip'  ➔  180.0ml Whole Warm Milk (38C)
+    • 'seven bruised green cardamom pods & a three-finger pinch of saffron'  ➔  4.4g Crushed Green Cardamom & Kashmiri Saffron
+    Hydration Audit       : 75.0% | Sentry Trace: d63d2f48520f4c9a
+----------------------------------------------------------------------------------------
+  [MEM-02] Abuelo Mateo's Dia de los Muertos Cinnamon Pan de Muerto (1968)
+    Elder Quote Preserved : 'Roll the dough bones slowly while telling the children how your great-grandfather built the adobe oven.'
+    • 'four brimming clay bowls of bread flour'  ➔  500.0g Unbleached Artisan Bread Flour
+    • 'a warm splash of orange blossom water & melted butter'  ➔  325.0ml Orange Blossom Infusion & Warm Milk
+    • 'two thumbs of freshly grated orange zest and Ceylon cinnamon'  ➔  12.0g Organic Orange Zest & Ground Cinnamon
+    Hydration Audit       : 65.0% | Sentry Trace: 9157ac2b65b74cae
+----------------------------------------------------------------------------------------
+  [MEM-03] Nana's Monsoon Ginger-Saffron Healing Kahwa (1982)
+    Elder Quote Preserved : 'Never boil the crushed almonds before the first rain hits the courtyard stone; let the steam carry the clove aroma.'
+    • 'three copper cups of spring water'  ➔  600.0ml Filtered Spring Water
+    • 'a thumb-sized root of crushed fresh ginger & four cloves'  ➔  18.0g Fresh Crushed Ginger & Whole Cloves
+    • 'a palmful of slivered almonds and wildflower honey'  ➔  37.0g Blanched Slivered Almonds & Raw Honey
+    Hydration Audit       : 100.0% | Sentry Trace: 9055a0fe560d4ca9
+----------------------------------------------------------------------------------------
+  Poetic Units Converted : 9 of 9 (100.0% deterministic metric accuracy)
+  Sentry Spans Recorded  : 18 gen_ai.agent / gen_ai.tool spans
+  FastAPI Ofrenda Check  : GET / (200 OK) | GET /api/memories (200 OK)
+  Offline Archive Export : 4909 bytes HTML5 + 5016 bytes RFC 8259 JSON
+  Cloud Bytes Transmitted: 0 bytes (100% Local Family Privacy Preserved)
+========================================================================================

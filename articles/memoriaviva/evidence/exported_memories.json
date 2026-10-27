@@ -1,0 +1,110 @@
+[
+  {
+    "memory_id": "MEM-01",
+    "title": "Dadi Jan's Partition-Era Cardamom & Saffron Sweet Bread",
+    "elder_name": "Dadi Jan (Fatima Begum)",
+    "year_recorded": 1947,
+    "cultural_tradition": "Partition-Era Family Hearth & Eid Morning Tradition",
+    "verbatim_elder_quote": "Measure the warm milk with your fingertips; when the dough sighs softly, the cardamom is awake.",
+    "woven_narrative": "Recorded from a crackly cassette tape in Hyderabad. Dadi Jan explains how she carried green cardamom pods knotted in her dupatta in 1947, baking sweet flat loaves on an iron tawa whenever the family needed comfort.",
+    "standardized_recipe": [
+      {
+        "original_phrase": "two generous cupped handfuls of stone-ground wheat flour",
+        "ingredient_name": "Stone-Ground Whole Wheat Flour (Atta)",
+        "metric_grams_or_ml": 240.0,
+        "unit": "g",
+        "culinary_note": "Sifted twice for a cloud-soft crumb"
+      },
+      {
+        "original_phrase": "one brass teacup of lukewarm milk tested with your fingertip",
+        "ingredient_name": "Whole Warm Milk (38C)",
+        "metric_grams_or_ml": 180.0,
+        "unit": "ml",
+        "culinary_note": "Lukewarm to bloom the saffron without scalding"
+      },
+      {
+        "original_phrase": "seven bruised green cardamom pods & a three-finger pinch of saffron",
+        "ingredient_name": "Crushed Green Cardamom & Kashmiri Saffron",
+        "metric_grams_or_ml": 4.4,
+        "unit": "g",
+        "culinary_note": "Infused in warm milk for 12 minutes"
+      }
+    ],
+    "hydration_ratio_pct": 75.0,
+    "air_gapped_verified": true,
+    "sentry_trace_id": "e7361839904a43ec",
+    "agent_latency_ms": 0.26
+  },
+  {
+    "memory_id": "MEM-02",
+    "title": "Abuelo Mateo's Dia de los Muertos Cinnamon Pan de Muerto",
+    "elder_name": "Abuelo Mateo Rivera",
+    "year_recorded": 1968,
+    "cultural_tradition": "Dia de los Muertos Candlelit Family Ofrenda (Oaxaca)",
+    "verbatim_elder_quote": "Roll the dough bones slowly while telling the children how your great-grandfather built the adobe oven.",
+    "woven_narrative": "Transcribed from a flour-stained notebook from Oaxaca (1968). Every October 31st at midnight, Abuelo Mateo lit marigold-scented candles so the kitchen warmth would welcome ancestors home.",
+    "standardized_recipe": [
+      {
+        "original_phrase": "four brimming clay bowls of bread flour",
+        "ingredient_name": "Unbleached Artisan Bread Flour",
+        "metric_grams_or_ml": 500.0,
+        "unit": "g",
+        "culinary_note": "High-gluten flour for the traditional bone-shaped crown"
+      },
+      {
+        "original_phrase": "a warm splash of orange blossom water & melted butter",
+        "ingredient_name": "Orange Blossom Infusion & Warm Milk",
+        "metric_grams_or_ml": 325.0,
+        "unit": "ml",
+        "culinary_note": "Gives Pan de Muerto its unmistakable Dia de los Muertos aroma"
+      },
+      {
+        "original_phrase": "two thumbs of freshly grated orange zest and Ceylon cinnamon",
+        "ingredient_name": "Organic Orange Zest & Ground Cinnamon",
+        "metric_grams_or_ml": 12.0,
+        "unit": "g",
+        "culinary_note": "Folded gently into the dough before the first rise"
+      }
+    ],
+    "hydration_ratio_pct": 65.0,
+    "air_gapped_verified": true,
+    "sentry_trace_id": "7e9d26b900a24e78",
+    "agent_latency_ms": 0.13
+  },
+  {
+    "memory_id": "MEM-03",
+    "title": "Nana's Monsoon Ginger-Saffron Healing Kahwa",
+    "elder_name": "Nana (Mirza Sahib)",
+    "year_recorded": 1982,
+    "cultural_tradition": "Monsoon Courtyard Storytelling & Winter Remembrance",
+    "verbatim_elder_quote": "Never boil the crushed almonds before the first rain hits the courtyard stone; let the steam carry the clove aroma.",
+    "woven_narrative": "Captured from a 48-second voice note recorded on a rainy evening in 1982. Nana brewed this golden spiced infusion in a brass samovar while reciting folk riddles to his grandchildren.",
+    "standardized_recipe": [
+      {
+        "original_phrase": "three copper cups of spring water",
+        "ingredient_name": "Filtered Spring Water",
+        "metric_grams_or_ml": 600.0,
+        "unit": "ml",
+        "culinary_note": "Simmered gently over low embers"
+      },
+      {
+        "original_phrase": "a thumb-sized root of crushed fresh ginger & four cloves",
+        "ingredient_name": "Fresh Crushed Ginger & Whole Cloves",
+        "metric_grams_or_ml": 18.0,
+        "unit": "g",
+        "culinary_note": "Bruised in a mortar to release essential oils"
+      },
+      {
+        "original_phrase": "a palmful of slivered almonds and wildflower honey",
+        "ingredient_name": "Blanched Slivered Almonds & Raw Honey",
+        "metric_grams_or_ml": 37.0,
+        "unit": "g",
+        "culinary_note": "Stirred in off the heat to preserve floral aroma"
+      }
+    ],
+    "hydration_ratio_pct": 100.0,
+    "air_gapped_verified": true,
+    "sentry_trace_id": "2a6de6b2d7494f6c",
+    "agent_latency_ms": 0.08
+  }
+]
