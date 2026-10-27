@@ -1,5 +1,9 @@
 """Unit tests for MemoriaViva schemas, guardrails, and Google ADK + Gemma 4 pipeline."""
 
+import sys
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
 import pytest
 from memoriaviva.guardrails import verify_air_gapped_endpoint, compute_and_validate_hydration
 from memoriaviva.dashboard import SAMPLE_MEMORIES, pipeline
