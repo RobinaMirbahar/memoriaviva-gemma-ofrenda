@@ -14,7 +14,7 @@ Every family has a **"Ghost in the Machine"** waiting to be remembered: a crackl
 
 **MemoriaViva** (*Living Memory*) is a warm, local-first **Family Oral-History Weaver, Heirloom Recipe Standardizer & Digital Family Storybook** powered by open-weights **Google Gemma 4** (`google/gemma-4-27b-it`), **Google Agent Development Kit (ADK)**, and **Sentry Agent Tracing**.
 
-![MemoriaViva Scrapbook Architecture Diagram](https://raw.githubusercontent.com/RobinaMirbahar/memoriaviva-gemma-ofrenda/main/articles/memoriaviva/arch_google_ghost_style.jpg)
+![MemoriaViva Technical Architecture on White Background](https://raw.githubusercontent.com/RobinaMirbahar/memoriaviva-gemma-ofrenda/main/articles/memoriaviva/memoriaviva_arch_white_v2.jpg)
 
 I interpreted this week's theme in the warm spirit of **Dia de los Muertos** and South Asian ancestral remembrance: **Lumi**, a friendly, spectacle-wearing memory ghost living on the same machine that reads fragmented family voice transcripts and handwritten recipe notes, preserves the elder's exact cultural idioms verbatim, converts poetic ancestral measurements (*"a three-finger pinch of saffron,"* *"four brimming clay bowls of flour"*) into reproducible metric grams and milliliters, and exports a **zero-dependency static W3C HTML5 (`4,909 bytes`) and RFC 8259 JSON (`5,016 bytes`) Family Storybook**.
 
@@ -102,8 +102,6 @@ memoriaviva-gemma-ofrenda/
 ---
 
 ## How I Built It
-
-![MemoriaViva Technical Architecture on White Background](https://raw.githubusercontent.com/RobinaMirbahar/memoriaviva-gemma-ofrenda/main/articles/memoriaviva/memoriaviva_arch_white_v2.jpg)
 
 I built **MemoriaViva** by combining **Google's open-weights AI ecosystem** with deterministic Python safety guardrails:
 

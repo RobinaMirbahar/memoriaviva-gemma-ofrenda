@@ -51,8 +51,6 @@ Cloud startups shut down or change pricing tiers every year. MemoriaViva exports
 
 ## 🏗️ System Architecture
 
-![MemoriaViva 3-Step Scrapbook Workflow](https://raw.githubusercontent.com/RobinaMirbahar/memoriaviva-gemma-ofrenda/main/articles/memoriaviva/arch_google_ghost_style.jpg)
-
 ![MemoriaViva Technical Architecture on White Background](https://raw.githubusercontent.com/RobinaMirbahar/memoriaviva-gemma-ofrenda/main/articles/memoriaviva/memoriaviva_arch_white_v2.jpg)
 
 ```mermaid
@@ -75,7 +73,7 @@ flowchart TD
         G_Sentry["LocalSentryTracer (18 gen_ai.agent & gen_ai.tool Spans)"]
     end
 
-    subgraph Vault ["4. Offline Family Archive & FastAPI Dashboard"]
+    subgraph Export ["4. FastAPI Dashboard & HTML5/JSON Export"]
         V_UI["FastAPI Family Storybook UI (GET / & POST /api/weave)"]
         V_HTML["Zero-Dependency W3C HTML5 (4,909 B) + RFC 8259 JSON (5,016 B) Export"]
     end
