@@ -1,0 +1,89 @@
+[
+  {
+    "name": "memory_id",
+    "type": "STRING",
+    "mode": "REQUIRED"
+  },
+  {
+    "name": "title",
+    "type": "STRING",
+    "mode": "REQUIRED"
+  },
+  {
+    "name": "elder_name",
+    "type": "STRING",
+    "mode": "REQUIRED"
+  },
+  {
+    "name": "year_recorded",
+    "type": "INTEGER",
+    "mode": "REQUIRED"
+  },
+  {
+    "name": "cultural_tradition",
+    "type": "STRING",
+    "mode": "REQUIRED"
+  },
+  {
+    "name": "verbatim_elder_quote",
+    "type": "STRING",
+    "mode": "REQUIRED"
+  },
+  {
+    "name": "woven_narrative",
+    "type": "STRING",
+    "mode": "REQUIRED"
+  },
+  {
+    "name": "standardized_recipe",
+    "type": "RECORD",
+    "mode": "REPEATED",
+    "fields": [
+      {
+        "name": "original_phrase",
+        "type": "STRING",
+        "mode": "REQUIRED"
+      },
+      {
+        "name": "ingredient_name",
+        "type": "STRING",
+        "mode": "REQUIRED"
+      },
+      {
+        "name": "metric_grams_or_ml",
+        "type": "FLOAT",
+        "mode": "REQUIRED"
+      },
+      {
+        "name": "unit",
+        "type": "STRING",
+        "mode": "REQUIRED"
+      },
+      {
+        "name": "culinary_note",
+        "type": "STRING",
+        "mode": "REQUIRED"
+      }
+    ]
+  },
+  {
+    "name": "hydration_ratio_pct",
+    "type": "FLOAT",
+    "mode": "REQUIRED"
+  },
+  {
+    "name": "air_gapped_verified",
+    "type": "BOOLEAN",
+    "mode": "REQUIRED"
+  },
+  {
+    "name": "sentry_trace_id",
+    "type": "STRING",
+    "mode": "REQUIRED"
+  },
+  {
+    "name": "agent_latency_ms",
+    "type": "FLOAT",
+    "mode": "REQUIRED"
+  }
+]

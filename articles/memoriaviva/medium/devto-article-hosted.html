@@ -4,8 +4,8 @@
   <meta charset="utf-8" />
   <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>MemoriaViva: A Cute Ghost in the Machine That Preserves Family Oral Histories &amp; Heirloom Recipes with Gemma 4 &amp; Google ADK</title>
-  <meta name="description" content="How I built a 100% local-first open-weights Gemma 4, Google ADK, and Sentry Agent Tracing pipeline that turns elders&#x27; voice notes and poetic measurements (&#x27;a handful of flour, a pinch of saffron&#x27;) into a zero-dependency HTML5 and JSON family storybook." />
+  <meta name="description" content="How I built a 100% local-first open-weights Gemma 4, Google ADK, BigQuery Family Vault, and Sentry Agent Tracing pipeline that turns elders' voice notes and poetic measurements into a permanent family storybook." />
+  <title>devto_article</title>
   <style>
     /* Default styles provided by pandoc.
     ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -189,7 +189,7 @@
 <p><em>This is a submission for the <a
 href="https://dev.to/challenges/hacktoberfest-week4-2026-10-26">Hacktoberfest
 Open-Source AI Challenge Week 4: Ghost in the Machine</a></em></p>
-<figure><img src="https://raw.githubusercontent.com/RobinaMirbahar/memoriaviva-gemma-ofrenda/main/articles/memoriaviva/medium/img/cover_google_ghost_style.5eb141d3.jpg" alt="MemoriaViva: A Cute Ghost in the Machine That Preserves Family Oral Histories &amp; Heirloom Recipes with Gemma 4 &amp; Google ADK" /></figure>
+<figure><img src="https://raw.githubusercontent.com/RobinaMirbahar/memoriaviva-gemma-ofrenda/main/articles/memoriaviva/medium/img/cover_google_ghost_style.6e9508ea.jpg" alt="devto_article" /></figure>
 <h4 id="what-i-built">What I Built</h4>
 <p>Every family has a <strong>"Ghost in the Machine"</strong> waiting to
 be remembered: a crackly 48-second WhatsApp voice note from a
@@ -203,10 +203,11 @@ local-first <strong>Family Oral-History Weaver, Heirloom Recipe
 Standardizer &amp; Digital Family Storybook</strong> powered by
 open-weights <strong>Google Gemma 4</strong>
 (<code>google/gemma-4-27b-it</code>), <strong>Google Agent Development
-Kit (ADK)</strong>, and <strong>Sentry Agent Tracing</strong>.</p>
+Kit (ADK)</strong>, <strong>Google BigQuery</strong> (Family Vault table
+schema), and <strong>Sentry Agent Tracing</strong>.</p>
 <p><img
-src="https://raw.githubusercontent.com/RobinaMirbahar/memoriaviva-gemma-ofrenda/main/articles/memoriaviva/memoriaviva_arch_white_v2.jpg"
-alt="MemoriaViva Technical Architecture on White Background" /></p>
+src="https://raw.githubusercontent.com/RobinaMirbahar/memoriaviva-gemma-ofrenda/main/articles/memoriaviva/arch_google_ghost_style.jpg"
+alt="MemoriaViva Scrapbook Architecture Diagram" /></p>
 <p>I interpreted this week's theme in the warm spirit of <strong>Dia de
 los Muertos</strong> and South Asian ancestral remembrance:
 <strong>Lumi</strong>, a friendly, spectacle-wearing memory ghost living
@@ -215,20 +216,24 @@ handwritten recipe notes, preserves the elder's exact cultural idioms
 verbatim, converts poetic ancestral measurements (<em>"a three-finger
 pinch of saffron,"</em> <em>"four brimming clay bowls of flour"</em>)
 into reproducible metric grams and milliliters, and exports a
-<strong>zero-dependency static W3C HTML5 (<code>4,909 bytes</code>) and
-RFC 8259 JSON (<code>5,016 bytes</code>) Family Storybook</strong>.</p>
+<strong>Dual-Mode Family Vault</strong> consisting of a self-contained
+<strong>W3C HTML5 Family Storybook (<code>4,909 bytes</code>)</strong>
+plus a <strong>Google BigQuery Newline-Delimited JSON
+(<code>exported_memories.jsonl</code>,
+<code>4,344 bytes</code>)</strong> table export.</p>
 <p><img src="https://raw.githubusercontent.com/RobinaMirbahar/memoriaviva-gemma-ofrenda/main/articles/memoriaviva/medium/img/devto-article-table-1.png"
-alt="Table: Heritage Archival Metric, Raw Family Voice Notes &amp; Index Cards, MemoriaViva (Gemma 4 + Google ADK)" /></p>
+alt="Table: Heritage Archival Metric, Raw Family Voice Notes &amp; Index Cards, MemoriaViva (Gemma 4 + Google ADK + BigQuery Vault)" /></p>
 <hr />
 <h4 id="demo">Demo</h4>
 <p>You can run the complete <strong>MemoriaViva</strong> three-stage
 <strong>Gemma 4 + Google ADK + Sentry Agent Tracing</strong> benchmark,
 verify the interactive <strong>FastAPI Family Storybook
-Dashboard</strong>, and export the offline HTML5 and JSON archive with a
-single command:</p>
+Dashboard</strong>, and export both the offline HTML5 book and the
+<strong>Google BigQuery JSONL Family Vault</strong> with a single
+command:</p>
 <pre class="bash"><code>python scripts/run_memoriaviva_demo.py
 ========================================================================================
-👻🕯️ MEMORIAVIVA: CUTE GHOST IN THE MACHINE (GEMMA 4 + ADK + SENTRY TRACING)
+👻🕯️ MEMORIAVIVA: CUTE GHOST IN THE MACHINE (GEMMA 4 + ADK + BIGQUERY VAULT)
 ========================================================================================
   Model                  : google/gemma-4-27b-it (100% Local Ollama / vLLM)
   Air-Gapped Endpoint    : http://127.0.0.1:11434 (0 Cloud Egress Verified)
@@ -239,27 +244,27 @@ single command:</p>
     • &#39;two generous cupped handfuls of stone-ground wheat flour&#39;  ➔  240.0g Stone-Ground Whole Wheat Flour (Atta)
     • &#39;one brass teacup of lukewarm milk tested with your fingertip&#39;  ➔  180.0ml Whole Warm Milk (38C)
     • &#39;seven bruised green cardamom pods &amp; a three-finger pinch of saffron&#39;  ➔  4.4g Crushed Green Cardamom &amp; Kashmiri Saffron
-    Hydration Audit       : 75.0% | Sentry Trace: 0f72204d799d41ec
+    Hydration Audit       : 75.0% | Sentry Trace: 49ef09ebc06d4014
 ----------------------------------------------------------------------------------------
   [MEM-02] Abuelo Mateo&#39;s Dia de los Muertos Cinnamon Pan de Muerto (1968)
     Elder Quote Preserved : &#39;Roll the dough bones slowly while telling the children how your great-grandfather built the adobe oven.&#39;
     • &#39;four brimming clay bowls of bread flour&#39;  ➔  500.0g Unbleached Artisan Bread Flour
     • &#39;a warm splash of orange blossom water &amp; melted butter&#39;  ➔  325.0ml Orange Blossom Infusion &amp; Warm Milk
     • &#39;two thumbs of freshly grated orange zest and Ceylon cinnamon&#39;  ➔  12.0g Organic Orange Zest &amp; Ground Cinnamon
-    Hydration Audit       : 65.0% | Sentry Trace: 71ad02f9326b488e
+    Hydration Audit       : 65.0% | Sentry Trace: e480da38d4c544bf
 ----------------------------------------------------------------------------------------
   [MEM-03] Nana&#39;s Monsoon Ginger-Saffron Healing Kahwa (1982)
     Elder Quote Preserved : &#39;Never boil the crushed almonds before the first rain hits the courtyard stone; let the steam carry the clove aroma.&#39;
     • &#39;three copper cups of spring water&#39;  ➔  600.0ml Filtered Spring Water
     • &#39;a thumb-sized root of crushed fresh ginger &amp; four cloves&#39;  ➔  18.0g Fresh Crushed Ginger &amp; Whole Cloves
     • &#39;a palmful of slivered almonds and wildflower honey&#39;  ➔  37.0g Blanched Slivered Almonds &amp; Raw Honey
-    Hydration Audit       : 100.0% | Sentry Trace: 3130e9903ca8403f
+    Hydration Audit       : 100.0% | Sentry Trace: fbfe81215ad54101
 ----------------------------------------------------------------------------------------
   Poetic Units Converted : 9 of 9 (100.0% deterministic metric accuracy)
   Sentry Spans Recorded  : 18 gen_ai.agent / gen_ai.tool spans
   FastAPI Ofrenda Check  : GET / (200 OK) | GET /api/memories (200 OK)
-  Offline Archive Export : 4909 bytes HTML5 + 5016 bytes RFC 8259 JSON
-  Cloud Bytes Transmitted: 0 bytes (100% Local Family Privacy Preserved)
+  Family Vault Export    : 4909 bytes HTML5 + 4344 bytes BigQuery JSONL (3 rows)
+  Cloud Bytes Transmitted: 0 bytes during local Gemma 4 inference
 ========================================================================================</code></pre>
 <h4
 id="interactive-family-storybook--recipe-weaver-ui-preview">Interactive
@@ -275,9 +280,12 @@ href="https://github.com/RobinaMirbahar/memoriaviva-gemma-ofrenda"><span>https:/
 <p><img src="https://raw.githubusercontent.com/RobinaMirbahar/memoriaviva-gemma-ofrenda/main/articles/memoriaviva/medium/img/devto-article-diagram-1.png" alt="diagram" /></p>
 <hr />
 <h4 id="how-i-built-it">How I Built It</h4>
+<p><img
+src="https://raw.githubusercontent.com/RobinaMirbahar/memoriaviva-gemma-ofrenda/main/articles/memoriaviva/memoriaviva_arch_white_v2.jpg"
+alt="MemoriaViva Technical Architecture on White Background" /></p>
 <p>I built <strong>MemoriaViva</strong> by combining <strong>Google's
-open-weights AI ecosystem</strong> with deterministic Python safety
-guardrails:</p>
+open-weights AI ecosystem</strong> and <strong>Google Cloud data
+architecture</strong> with deterministic Python safety guardrails:</p>
 <ol type="1">
 <li><strong>Open-Weights Google Gemma 4
 (<code>google/gemma-4-27b-it</code>):</strong>
@@ -305,16 +313,17 @@ stone-ground wheat flour"</em>) into structured
 keeping the original phrase beside it.</li>
 <li><strong>Stage 3
 (<code>CandlelitOfrendaCuratorAgent</code>):</strong> Validates the
-memory against <code>WovenHeirloomStoryCard</code> and exports a
-self-contained HTML5 and JSON story card.</li>
+memory against <code>WovenHeirloomStoryCard</code> and prepares the
+record for the <strong>Family Vault</strong>.</li>
 </ul></li>
 <li><strong>Deterministic Privacy &amp; Culinary Guardrails
 (<code>memoriaviva/guardrails.py</code>):</strong>
 <ul>
 <li><strong><code>verify_air_gapped_endpoint()</code>:</strong> Rejects
 any non-local hostname (<code>127.0.0.1</code> / <code>localhost</code>
-/ <code>::1</code>), guaranteeing that <code>0 bytes</code> of family
-recordings leave the machine.</li>
+/ <code>::1</code>) during inference, guaranteeing that
+<code>0 bytes</code> of raw family recordings are sent to external LLM
+APIs.</li>
 <li><strong><code>compute_and_validate_hydration()</code>:</strong>
 Audits the ratio of liquid milliliters to dry flour grams
 (<code>75.0%</code> for <code>MEM-01</code>, <code>65.0%</code> for
@@ -322,14 +331,28 @@ Audits the ratio of liquid milliliters to dry flour grams
 <code>MEM-03</code>) within deterministic bounds (<code>45.0%</code> to
 <code>95.0%</code> for doughs).</li>
 </ul></li>
-<li><strong>Google AI Studio &amp; Optional Private Cloud Run
-Container:</strong>
+<li><strong>Dual-Mode Family Vault (Local W3C HTML5 + Google BigQuery
+Table Schema):</strong>
 <ul>
-<li>I designed the structured Pydantic v2 JSON schemas using
-<strong>Google AI Studio</strong> patterns and included a
-<code>Dockerfile</code> so families can optionally run the FastAPI
-dashboard in an isolated container.</li>
+<li>By default, <code>scripts/run_memoriaviva_demo.py</code> writes the
+woven memories to a self-contained <strong>W3C HTML5 Family
+Storybook</strong> (<code>4,909 bytes</code>) and a
+<strong>Newline-Delimited JSON (<code>exported_memories.jsonl</code>,
+<code>4,344 bytes</code>)</strong> file alongside <a
+href="https://github.com/RobinaMirbahar/memoriaviva-gemma-ofrenda/blob/main/articles/memoriaviva/evidence/bigquery_vault_schema.json"><code>bigquery_vault_schema.json</code></a>.</li>
+<li>Because <code>standardized_recipe</code> is structured as a
+<code>RECORD REPEATED</code> nested array, families who want to back up
+their structured cookbook across continents in their own private Google
+Cloud project can load the JSONL archive directly into a <strong>Google
+BigQuery</strong> table
+(<code>memoriaviva_vault.heirloom_memories</code>):</li>
 </ul></li>
+</ol>
+<pre class="bash"><code>bq load --source_format=NEWLINE_DELIMITED_JSON \
+  memoriaviva_vault.heirloom_memories \
+  articles/memoriaviva/evidence/exported_memories.jsonl \
+  articles/memoriaviva/evidence/bigquery_vault_schema.json</code></pre>
+<ol start="5" type="1">
 <li><strong>Sentry Agent Tracing
 (<code>LocalSentryTracer</code>):</strong>
 <ul>
@@ -356,20 +379,21 @@ voices, and ancestral heritage</strong>, open-weights AI provides three
 concrete engineering guarantees:</p>
 <ol type="1">
 <li><strong>Intimate Family Voices Stay on <code>127.0.0.1</code>
-(<code>0 bytes</code> Cloud Egress):</strong> Families can organize
-voice transcripts and recipes locally without uploading private
-recordings to a third-party cloud API.</li>
+(<code>0 bytes</code> LLM Cloud Egress):</strong> Families can
+transcribe and structure voice notes locally with <strong>Gemma
+4</strong> without uploading private recordings to a third-party
+commercial LLM API.</li>
 <li><strong>Works Offline in Courtyards, Villages &amp; Field
 Recordings:</strong> When visiting elders in rural towns or recording
 oral histories without internet connectivity, the local <strong>Gemma 4
 + Google ADK</strong> pipeline runs offline on the same machine.</li>
-<li><strong>Zero-Dependency Static HTML5 &amp; RFC 8259 JSON Offline
-Archive:</strong> Startup cloud services shut down or change pricing
-tiers every year. By exporting a self-contained <strong>W3C
-HTML5</strong> file (<code>4,909 bytes</code>) with inline CSS and an
-<strong>IETF RFC 8259 JSON</strong> archive (<code>5,016 bytes</code>),
-your family cookbook opens directly in any standard web browser offline
-with zero external script or database dependencies.</li>
+<li><strong>Open Standards + Private Google BigQuery Family Vault
+Ownership:</strong> By exporting a self-contained <strong>W3C
+HTML5</strong> file (<code>4,909 bytes</code>) alongside a
+<strong>Google BigQuery JSONL</strong> archive
+(<code>4,344 bytes</code>), your family owns both an offline
+browser-ready book and a structured analytical table under your own IAM
+control.</li>
 </ol>
 <hr />
 <h4 id="my-agent-session">My Agent Session</h4>
@@ -387,7 +411,7 @@ with zero external script or database dependencies.</li>
 <code>hydration_pct=75.0</code>)</li>
 <li><code>gen_ai.agent</code> ➔
 <code>CandlelitOfrendaCuratorAgent</code> (<code>air_gapped=True</code>,
-<code>trace_id="0f72204d799d41ec"</code>)</li>
+<code>trace_id="49ef09ebc06d4014"</code>)</li>
 </ul>
 <hr />
 <h4 id="the-spirit-of-it">The Spirit of It</h4>
@@ -404,7 +428,7 @@ much <em>"two cupped handfuls"</em> weighs. Seeing <strong>Gemma
 (<code>240.0g Stone-Ground Whole Wheat Flour</code> and
 <code>180.0ml Whole Warm Milk</code> at <code>75.0%</code> hydration
 alongside Dadi Jan's exact words) inside a self-contained digital family
-book brought this project to life.</p>
+book and BigQuery Family Vault brought this project to life.</p>
 <hr />
 <h4 id="prize-categories">Prize Categories</h4>
 <ul>

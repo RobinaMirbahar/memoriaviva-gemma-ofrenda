@@ -1,4 +1,4 @@
-"""Render clean white-background architecture diagram with 100% verified claims (no 50-year claim)."""
+﻿"""Render clean white-background architecture diagram with 100% verified claims (no 50-year claim)."""
 
 from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
@@ -30,11 +30,11 @@ cards = [
         "1. Local Family Inputs",
         (224, 242, 254),
         [
-            "• Handwritten Recipe Cards",
-            "• Elders' Oral History Notes",
-            "• Vintage Photo Metadata",
-            "• Regional Idioms (EN/UR/ES)",
-            "• Local Loopback Lock:",
+            "â€¢ Handwritten Recipe Cards",
+            "â€¢ Elders' Oral History Notes",
+            "â€¢ Vintage Photo Metadata",
+            "â€¢ Regional Idioms (EN/UR/ES)",
+            "â€¢ Local Loopback Lock:",
             "  host = 127.0.0.1",
         ],
     ),
@@ -43,10 +43,10 @@ cards = [
         (254, 243, 199),
         [
             "SequentialAgent Orchestrator",
-            "├ OralHistoryWhisperAgent",
-            "├ RecipeAlchemistAgent",
-            "│ (Cup/Handful -> Grams)",
-            "└ OfrendaCuratorAgent",
+            "â”œ OralHistoryWhisperAgent",
+            "â”œ RecipeAlchemistAgent",
+            "â”‚ (Cup/Handful -> Grams)",
+            "â”” OfrendaCuratorAgent",
             "  (WovenHeirloomStoryCard)",
         ],
     ),
@@ -55,23 +55,23 @@ cards = [
         (209, 250, 229),
         [
             "google/gemma-4-27b-it",
-            "• Local Ollama / vLLM Engine",
-            "• Pydantic v2 Schema Guard",
-            "• Cultural Idiom Preservation",
-            "• Deterministic Math Audit",
-            "• Zero Cloud Egress Check",
+            "â€¢ Local Ollama / vLLM Engine",
+            "â€¢ Pydantic v2 Schema Guard",
+            "â€¢ Cultural Idiom Preservation",
+            "â€¢ Deterministic Math Audit",
+            "â€¢ Zero Cloud Egress Check",
         ],
     ),
     (
-        "4. Offline Family Archive",
+        "4. Family Vault (BigQuery)",
         (243, 232, 255),
         [
-            "• FastAPI Family Storybook",
-            "• Self-Contained HTML5 Book",
+            "â€¢ FastAPI Family Storybook",
+            "â€¢ Self-Contained HTML5 Book",
             "  (W3C Standard, 4,909 B)",
-            "• RFC 8259 JSON Export",
-            "  (5,016 B Structured Data)",
-            "• Sentry Agent Tracing",
+            "â€¢ RFC 8259 JSON Export",
+            "  (4,344 B / 3 Nested Rows)",
+            "â€¢ Sentry Agent Tracing",
         ],
     ),
 ]
@@ -128,7 +128,7 @@ d.text((bx0 + 78, by0 + 16), "Deterministic Heritage & Privacy Interlocks (memor
 rows = [
     ("Air-Gapped Socket Guard:", (4, 120, 87), "Blocks all non-loopback (127.0.0.1) HTTP calls so family stories never touch external servers"),
     ("Culinary Ratio Auditor:", (3, 105, 161), "Validates hydration & spice ratios (45% to 95%) when converting 'a pinch / handful' into metric grams"),
-    ("Zero-Dependency Export:", (109, 40, 217), "Exports self-contained W3C HTML5 (4,909 B) & RFC 8259 JSON (5,016 B) files with zero cloud lock-in"),
+    ("BigQuery & HTML5 Vault:", (109, 40, 217), "Exports W3C HTML5 (4,909 B) & BigQuery JSONL (4,344 B) for local archive or BigQuery table sync"),
 ]
 
 ry = by0 + 74
@@ -144,3 +144,4 @@ out_art = Path(r"C:\Users\s tech\.gemini\antigravity\brain\d24be4a9-559f-4961-99
 img.save(out_repo, quality=95)
 img.save(out_art, quality=95)
 print("Saved clean memoriaviva_arch_white_v2.jpg without any 50-year claims!")
+
