@@ -1,4 +1,4 @@
-﻿---
+---
 title: "MemoriaViva: A Cute Ghost in the Machine That Preserves Family Oral Histories & Heirloom Recipes with Gemma 4 & Google ADK"
 published: false
 description: "How I built a 100% local-first open-weights Gemma 4, Google ADK, BigQuery Family Vault, and Sentry Agent Tracing pipeline that turns elders' voice notes and poetic measurements into a permanent family storybook."

@@ -1,4 +1,4 @@
-﻿# 👻🕯️ MemoriaViva: Cute Ghost in the Machine for Family Oral Histories & Heirloom Recipes (Gemma 4 + Google ADK + BigQuery Family Vault)
+# 👻🕯️ MemoriaViva: Cute Ghost in the Machine for Family Oral Histories & Heirloom Recipes (Gemma 4 + Google ADK + BigQuery Family Vault)
 
 [![CI Verification](https://github.com/RobinaMirbahar/memoriaviva-gemma-ofrenda/actions/workflows/ci.yml/badge.svg)](https://github.com/RobinaMirbahar/memoriaviva-gemma-ofrenda/actions/workflows/ci.yml)
 [![Hacktoberfest 2026](https://img.shields.io/badge/Hacktoberfest%202026-Ghost%20in%20the%20Machine-f59e0b?style=for-the-badge&logo=github)](https://dev.to/challenges/hacktoberfest-week4-2026-10-26)
