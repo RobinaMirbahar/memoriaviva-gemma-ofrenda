@@ -157,7 +157,7 @@ During the benchmark run, **MemoriaViva** recorded **18 structured `gen_ai.agent
 - `gen_ai.tool` → `HeirloomRecipeAlchemistAgent.standardize_units` (`ingredients_converted=3`, `hydration_pct=75.0`, `duration_ms=62.5`)
 - `gen_ai.agent` → `CandlelitOfrendaCuratorAgent` (`air_gapped=True`, `trace_id="db4de60c9e774e83"`, `duration_ms=32.1`)
 
-![MemoriaViva Technical Architecture](https://raw.githubusercontent.com/RobinaMirbahar/memoriaviva-gemma-ofrenda/main/articles/memoriaviva/memoriaviva_arch.jpg)
+![MemoriaViva Technical Architecture](https://raw.githubusercontent.com/RobinaMirbahar/memoriaviva-gemma-ofrenda/main/articles/memoriaviva/memoriaviva_arch_white.jpg)
 
 ---
 
