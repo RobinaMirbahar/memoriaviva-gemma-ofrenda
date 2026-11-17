@@ -2,9 +2,9 @@
 
 [![CI Verification](https://github.com/RobinaMirbahar/memoriaviva-gemma-ofrenda/actions/workflows/ci.yml/badge.svg)](https://github.com/RobinaMirbahar/memoriaviva-gemma-ofrenda/actions/workflows/ci.yml)
 [![Hacktoberfest 2026](https://img.shields.io/badge/Hacktoberfest%202026-Ghost%20in%20the%20Machine-f59e0b?style=for-the-badge&logo=github)](https://dev.to/challenges/hacktoberfest-week4-2026-10-26)
-[![Google Gemma 4](https://img.shields.io/badge/Open--Weights-Gemma%204%20(27B)-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://ai.google.dev/gemma/docs)
-[![Google ADK](https://img.shields.io/badge/Orchestration-Google%20ADK-34A853?style=for-the-badge&logo=googlecloud&logoColor=white)](https://google.github.io/adk-docs/)
-[![Google BigQuery](https://img.shields.io/badge/Family%20Vault-Google%20BigQuery-4285F4?style=for-the-badge&logo=googlebigquery&logoColor=white)](https://cloud.google.com/bigquery/docs/loading-data-cloud-storage-json)
+[![Google Gemma 4](https://img.shields.io/badge/Open--Weights-Gemma%204%20(27B)-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://ai.google.dev/gemma/docs?utm_campaign=deveco_gdemembers&utm_source=deveco)
+[![Google ADK](https://img.shields.io/badge/Orchestration-Google%20ADK-34A853?style=for-the-badge&logo=googlecloud&logoColor=white)](https://google.github.io/adk-docs/?utm_campaign=deveco_gdemembers&utm_source=deveco)
+[![Google BigQuery](https://img.shields.io/badge/Family%20Vault-Google%20BigQuery-4285F4?style=for-the-badge&logo=googlebigquery&logoColor=white)](https://cloud.google.com/bigquery/docs/loading-data-cloud-storage-json?utm_campaign=deveco_gdemembers&utm_source=deveco)
 [![Sentry Agent Tracing](https://img.shields.io/badge/Observability-Sentry%20Agent%20Tracing-362D59?style=for-the-badge&logo=sentry&logoColor=white)](https://docs.sentry.io/platforms/python/tracing/ai-agents/)
 
 ![MemoriaViva Cover](https://raw.githubusercontent.com/RobinaMirbahar/memoriaviva-gemma-ofrenda/main/articles/memoriaviva/cover_google_ghost_style.6e9508ea.jpg)
@@ -154,10 +154,10 @@ bq load --source_format=NEWLINE_DELIMITED_JSON \
 
 ## 📚 Official Documentation & References
 
-- **Google Gemma Open-Weights Models Documentation:** [https://ai.google.dev/gemma/docs](https://ai.google.dev/gemma/docs)
-- **Google Agent Development Kit (ADK) Documentation (`SequentialAgent`):** [https://google.github.io/adk-docs/agents/workflow-agents/sequential-agents/](https://google.github.io/adk-docs/agents/workflow-agents/sequential-agents/)
-- **Google BigQuery Loading Newline-Delimited JSON Documentation:** [https://cloud.google.com/bigquery/docs/loading-data-cloud-storage-json](https://cloud.google.com/bigquery/docs/loading-data-cloud-storage-json)
-- **Google AI Studio (Structured Outputs & Prompt Prototyping):** [https://ai.google.dev/gemini-api/docs/structured-output](https://ai.google.dev/gemini-api/docs/structured-output)
+- **Google Gemma Open-Weights Models Documentation:** [https://ai.google.dev/gemma/docs?utm_campaign=deveco_gdemembers&utm_source=deveco](https://ai.google.dev/gemma/docs?utm_campaign=deveco_gdemembers&utm_source=deveco)
+- **Google Agent Development Kit (ADK) Documentation (`SequentialAgent`):** [https://google.github.io/adk-docs/agents/workflow-agents/sequential-agents/?utm_campaign=deveco_gdemembers&utm_source=deveco](https://google.github.io/adk-docs/agents/workflow-agents/sequential-agents/?utm_campaign=deveco_gdemembers&utm_source=deveco)
+- **Google BigQuery Loading Newline-Delimited JSON Documentation:** [https://cloud.google.com/bigquery/docs/loading-data-cloud-storage-json?utm_campaign=deveco_gdemembers&utm_source=deveco](https://cloud.google.com/bigquery/docs/loading-data-cloud-storage-json?utm_campaign=deveco_gdemembers&utm_source=deveco)
+- **Google AI Studio (Structured Outputs & Prompt Prototyping):** [https://ai.google.dev/gemini-api/docs/structured-output?utm_campaign=deveco_gdemembers&utm_source=deveco](https://ai.google.dev/gemini-api/docs/structured-output?utm_campaign=deveco_gdemembers&utm_source=deveco)
 - **Sentry AI Agent Tracing & OpenTelemetry Semantic Conventions:** [https://docs.sentry.io/platforms/python/tracing/ai-agents/](https://docs.sentry.io/platforms/python/tracing/ai-agents/)
 
 ---
@@ -170,7 +170,7 @@ AI Researcher · Cloud Solutions Architect · Author of [*AI Engineering*](https
 [![GitHub](https://img.shields.io/badge/GitHub-RobinaMirbahar-181717?style=flat-square&logo=github)](https://github.com/RobinaMirbahar)
 [![Portfolio](https://img.shields.io/badge/Portfolio-robinamirbahar.github.io-38bdf8?style=flat-square&logo=googlechrome&logoColor=white)](https://robinamirbahar.github.io/)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Robina%20Mirbahar-0A66C2?style=flat-square&logo=linkedin)](https://linkedin.com/in/robinamirbahar)
-[![GDE](https://img.shields.io/badge/Google%20Developer%20Expert-Cloud%20%26%20AI-4285F4?style=flat-square&logo=google)](https://developers.google.com/profile/u/106918534005910641104)
+[![GDE](https://img.shields.io/badge/Google%20Developer%20Expert-Cloud%20%26%20AI-4285F4?style=flat-square&logo=google)](https://developers.google.com/profile/u/106918534005910641104?utm_campaign=deveco_gdemembers&utm_source=deveco)
 [![DEV.to](https://img.shields.io/badge/DEV.to-@robinamirbahar-0A0A0A?style=flat-square&logo=devdotto)](https://dev.to/robinamirbahar)
 [![Medium](https://img.shields.io/badge/Medium-@robinamirbahar-12100E?style=flat-square&logo=medium)](https://medium.com/@robinamirbahar)
 [![YouTube](https://img.shields.io/badge/YouTube-@robinacodesai-FF0000?style=flat-square&logo=youtube)](https://www.youtube.com/@robinacodesai)
