@@ -10,9 +10,8 @@
 ![MemoriaViva Cover](https://raw.githubusercontent.com/RobinaMirbahar/memoriaviva-gemma-ofrenda/main/articles/memoriaviva/cover_google_ghost_style.6e9508ea.jpg)
 
 > **Author & Architect:** [Robina Mirbahar](https://github.com/RobinaMirbahar) ([Google Developer Expert in Cloud & AI](https://developers.google.com/profile/u/106918534005910641104?utm_campaign=deveco_gdemembers&utm_source=deveco) · Google Cloud Champion Innovator · Co-Author of [*AI Engineering*](https://www.amazon.com/dp/B0GWCZWCF4))  
-> 📚 **Companion Publications:** [DEV.to (@gde) Featured Article](https://dev.to/gde/memoriaviva-a-cute-ghost-in-the-machine-that-preserves-family-oral-histories-heirloom-recipes-5g4g) · [Medium Article](https://medium.com/@robinamirbahar/memoriaviva-a-cute-ghost-in-the-machine-that-preserves-family-oral-histories-heirloom-recipes-5d5bc6c38262) · Hacktoberfest Week 4 (*Ghost in the Machine*)  
-> **Challenge Track:** Hacktoberfest Open-Source AI Challenge Week 4: *Ghost in the Machine* (`#hf26challenge`, `#gemma`, `#googleai`)  
-> **Core Stack:** Open-Weights **Google Gemma 4** (`google/gemma-4-27b-it`), **Google Agent Development Kit (ADK)**, **Google BigQuery** (JSONL Family Vault Table), **Google AI Studio**, **FastAPI**, **Pydantic v2**, and **Sentry Agent Tracing**.
+> 📚 **Companion Publications:** [DEV.to (@gde) Featured Article](https://dev.to/gde/memoriaviva-a-cute-ghost-in-the-machine-that-preserves-family-oral-histories-heirloom-recipes-5g4g) · [Medium Article](https://medium.com/@robinamirbahar/memoriaviva-a-cute-ghost-in-the-machine-that-preserves-family-oral-histories-heirloom-recipes-5d5bc6c38262) · Hacktoberfest Week 4: *Ghost in the Machine* (#hf26challenge, #gemma, #googleai)  
+> **Core Stack:** Open-Weights [Google Gemma 4](https://ai.google.dev/gemma/docs?utm_campaign=deveco_gdemembers&utm_source=deveco) (google/gemma-4-27b-it), [Google Agent Development Kit (ADK)](https://google.github.io/adk-docs/?utm_campaign=deveco_gdemembers&utm_source=deveco), [Google BigQuery](https://cloud.google.com/bigquery/docs?utm_campaign=deveco_gdemembers&utm_source=deveco) (JSONL Family Vault Table), [Google AI Studio](https://aistudio.google.com/?utm_campaign=deveco_gdemembers&utm_source=deveco), FastAPI, Pydantic v2, and Sentry Agent Tracing.
 
 ---
 
