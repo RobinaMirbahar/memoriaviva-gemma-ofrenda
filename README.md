@@ -9,7 +9,8 @@
 
 ![MemoriaViva Cover](https://raw.githubusercontent.com/RobinaMirbahar/memoriaviva-gemma-ofrenda/main/articles/memoriaviva/cover_google_ghost_style.6e9508ea.jpg)
 
-> **Author & Architect:** [Robina Mirbahar](https://github.com/RobinaMirbahar) (Google Developer Expert in Cloud & AI · Google Cloud Champion Innovator · Author of [*AI Engineering*](https://amazon.com/dp/B0GWCZWCF4))  
+> **Author & Architect:** [Robina Mirbahar](https://github.com/RobinaMirbahar) ([Google Developer Expert in Cloud & AI](https://developers.google.com/profile/u/106918534005910641104?utm_campaign=deveco_gdemembers&utm_source=deveco) · Google Cloud Champion Innovator · Co-Author of [*AI Engineering*](https://www.amazon.com/dp/B0GWCZWCF4))  
+> 📚 **Companion Publications:** [DEV.to (@gde) Featured Article](https://dev.to/gde/memoriaviva-a-cute-ghost-in-the-machine-that-preserves-family-oral-histories-heirloom-recipes-5g4g) · [Medium Article](https://medium.com/@robinamirbahar/memoriaviva-a-cute-ghost-in-the-machine-that-preserves-family-oral-histories-heirloom-recipes-5d5bc6c38262) · Hacktoberfest Week 4 (*Ghost in the Machine*)  
 > **Challenge Track:** Hacktoberfest Open-Source AI Challenge Week 4: *Ghost in the Machine* (`#hf26challenge`, `#gemma`, `#googleai`)  
 > **Core Stack:** Open-Weights **Google Gemma 4** (`google/gemma-4-27b-it`), **Google Agent Development Kit (ADK)**, **Google BigQuery** (JSONL Family Vault Table), **Google AI Studio**, **FastAPI**, **Pydantic v2**, and **Sentry Agent Tracing**.
 
@@ -83,6 +84,34 @@ flowchart TD
     I_Voice --> I_Guard --> A_Stage1 --> A_Stage2 --> G_Hydration --> A_Stage3 --> G_Schema --> V_UI
     A_Stage2 --> G_Sentry
     V_UI --> V_HTML
+    style Input fill:#fce7f3,stroke:#db2777,stroke-width:2px,color:#831843
+    style Inputs fill:#dbeafe,stroke:#2563eb,stroke-width:2px,color:#1e3a8a
+    style I_Voice fill:#dcfce7,stroke:#16a34a,stroke-width:2px,color:#14532d
+    style Transcripts fill:#f3e8ff,stroke:#9333ea,stroke-width:2px,color:#581c87
+    style I_Recipe fill:#fce7f3,stroke:#db2777,stroke-width:2px,color:#831843
+    style Measurements fill:#dbeafe,stroke:#2563eb,stroke-width:2px,color:#1e3a8a
+    style I_Guard fill:#dcfce7,stroke:#16a34a,stroke-width:2px,color:#14532d
+    style verify_air_gapped_endpoint fill:#f3e8ff,stroke:#9333ea,stroke-width:2px,color:#581c87
+    style Guard fill:#fce7f3,stroke:#db2777,stroke-width:2px,color:#831843
+    style ADK fill:#dbeafe,stroke:#2563eb,stroke-width:2px,color:#1e3a8a
+    style A_Stage1 fill:#dcfce7,stroke:#16a34a,stroke-width:2px,color:#14532d
+    style OralHistoryWhisperAgent fill:#f3e8ff,stroke:#9333ea,stroke-width:2px,color:#581c87
+    style A_Stage2 fill:#fce7f3,stroke:#db2777,stroke-width:2px,color:#831843
+    style HeirloomRecipeAlchemistAgent fill:#dbeafe,stroke:#2563eb,stroke-width:2px,color:#1e3a8a
+    style A_Stage3 fill:#dcfce7,stroke:#16a34a,stroke-width:2px,color:#14532d
+    style CandlelitOfrendaCuratorAgent fill:#f3e8ff,stroke:#9333ea,stroke-width:2px,color:#581c87
+    style Audit fill:#fce7f3,stroke:#db2777,stroke-width:2px,color:#831843
+    style G_Hydration fill:#dbeafe,stroke:#2563eb,stroke-width:2px,color:#1e3a8a
+    style compute_and_validate_hydration fill:#dcfce7,stroke:#16a34a,stroke-width:2px,color:#14532d
+    style G_Schema fill:#f3e8ff,stroke:#9333ea,stroke-width:2px,color:#581c87
+    style Validation fill:#fce7f3,stroke:#db2777,stroke-width:2px,color:#831843
+    style G_Sentry fill:#dbeafe,stroke:#2563eb,stroke-width:2px,color:#1e3a8a
+    style LocalSentryTracer fill:#dcfce7,stroke:#16a34a,stroke-width:2px,color:#14532d
+    style Vault fill:#f3e8ff,stroke:#9333ea,stroke-width:2px,color:#581c87
+    style V_UI fill:#fce7f3,stroke:#db2777,stroke-width:2px,color:#831843
+    style UI fill:#dbeafe,stroke:#2563eb,stroke-width:2px,color:#1e3a8a
+    style V_HTML fill:#dcfce7,stroke:#16a34a,stroke-width:2px,color:#14532d
+    style HTML5 fill:#f3e8ff,stroke:#9333ea,stroke-width:2px,color:#581c87
 ```
 
 ---
@@ -165,7 +194,7 @@ bq load --source_format=NEWLINE_DELIMITED_JSON \
 ## 👩‍💻 About the Author
 
 **Robina Mirbahar**  
-AI Researcher · Cloud Solutions Architect · Author of [*AI Engineering*](https://amazon.com/dp/B0GWCZWCF4)
+AI Researcher · Cloud Solutions Architect · Co-Author of [*AI Engineering*](https://amazon.com/dp/B0GWCZWCF4)
 
 [![GitHub](https://img.shields.io/badge/GitHub-RobinaMirbahar-181717?style=flat-square&logo=github)](https://github.com/RobinaMirbahar)
 [![Portfolio](https://img.shields.io/badge/Portfolio-robinamirbahar.github.io-38bdf8?style=flat-square&logo=googlechrome&logoColor=white)](https://robinamirbahar.github.io/)
